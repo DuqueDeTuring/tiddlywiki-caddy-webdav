@@ -1,0 +1,13 @@
+{
+        order webdav before file_server
+}
+
+:8080 {
+        root * /wiki 
+
+        route {
+                webdav /* {
+                }
+                file_server
+        }
+}
