@@ -28,7 +28,7 @@ If you are running the container in your local machine then you can access your 
 
 # Contenedor mínimo para tener TiddlyWiki
 
-Adoro la velocidad y útil sencillez de [TiddlyWiki](https://tiddlywiki.com/). Este es un contenedor muy simple para ejecutar TiddlyWiki con el soporte de WebDav para guardar cambios provisto por [Caddy](https://caddyserver.com/).
+Adoro la velocidad y lo útil que es [TiddlyWiki](https://tiddlywiki.com/). Este es un contenedor muy simple para ejecutar TiddlyWiki con el soporte de WebDav para guardar cambios provisto por [Caddy](https://caddyserver.com/).
 
 Para el soporte de WebDAV se instala en Caddy el plugin [Caddy-WebDAV](github.com/mholt/caddy-webdav).
 
