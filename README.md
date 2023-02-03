@@ -32,7 +32,7 @@ Adoro la velocidad y lo útil que es [TiddlyWiki](https://tiddlywiki.com/). Este
 
 Para el soporte de WebDAV se instala en Caddy el plugin [Caddy-WebDAV](github.com/mholt/caddy-webdav).
 
-Este repositorio incluye una wiki vacía (directamente del proyecto TiddlyWiki), debería ir al [sitio oficial](https://tiddlywiki.com/), descargar el archivo "emtpy wiki" y usarlo como el archivo que se usa desde el container (ver el _mapping_ utilizado al hacer el _container run_).
+Este repositorio incluye una wiki vacía (directamente del proyecto TiddlyWiki), debería ir al [sitio oficial](https://tiddlywiki.com/), descargar el archivo "emtpy wiki" y usarlo como el archivo definido en el volumen (ver el _mapping_ utilizado al hacer el _container run_).
 
 Con podman o docker instalados sólo se requieren 2 pasos:
 
