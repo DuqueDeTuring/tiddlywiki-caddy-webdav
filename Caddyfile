@@ -2,7 +2,7 @@
         order webdav before file_server
 }
 
-:8080 {
+:80 {
         root * /wiki 
 
         route {
