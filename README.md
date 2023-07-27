@@ -15,7 +15,7 @@ podman image build -t mywiki .
 
 2. Run container
 ```
-podman container run --rm -p 8080:8080 -v YOUR_PATH_TO_YOUR_TIDDLYWIKI_FILE/empty.html:/wiki/wiki.html --name mywiki mywiki
+podman container run --rm -p 8080:80 -v YOUR_PATH_TO_YOUR_TIDDLYWIKI_FILE/empty.html:/wiki/wiki.html --name mywiki mywiki
 ```
 
 
