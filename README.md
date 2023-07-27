@@ -43,7 +43,7 @@ podman image build -t mywiki .
 
 2. Ejecutar el contenedor 
 ```
-podman container run --rm -p 8080:8080 -v YOUR_PATH_TO_YOUR_TIDDLYWIKI_FILE/empty.html:/wiki/wiki.html --name mywiki mywiki
+podman container run --rm -p 8080:80 -v YOUR_PATH_TO_YOUR_TIDDLYWIKI_FILE/empty.html:/wiki/wiki.html --name mywiki mywiki
 ```
 
 Si está usando el contenedor local en su máquina entonces puede accesar su wiki en: http://localhost:8080/wiki.html
