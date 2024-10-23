@@ -3,7 +3,7 @@
 }
 
 :80 {
-        root * /wiki 
+        root * /wikis
 
         route {
                 webdav /* {
