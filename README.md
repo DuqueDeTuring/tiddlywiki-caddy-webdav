@@ -20,7 +20,9 @@ Or:
 podman container run --rm -p 8080:80 -v ~/Downloads/empty.html:/wikis/wiki.html --name miswikis duquedeturing/tiddlywiki:latest
 ```
 
-## If you want to build your own image:
+## Podman or Docker
+
+### If you want to build your own image:
 
 The WebDAV support in Caddy comes as a plugin: [Caddy-WebDAV](github.com/mholt/caddy-webdav).
 
@@ -37,6 +39,26 @@ podman container run --rm -p 8080:80 -v YOUR_PATH_TO_YOUR_TIDDLYWIKI_FILE/empty.
 ```
 
 If you are running the container in your local machine then you can access your wiki at: http://localhost:8080/wiki.html
+
+## Apple Containers
+
+Apple released an awesome tool for building and running Linux containers on a Apple Silicon Mac. You can build the image and run your wiki directly on your Mac.
+
+So, first go to the [official tool repository](https://github.com/apple/container) and follow the instructions to build and run the tool. Once you have the tool running on your Mac do the following:
+
+1. Build the image from this repo directory
+
+```zsh
+container build --tag wikis --file Dockerfile .
+```
+
+2. Run the container
+
+```zsh
+container run --name mywikis -v MY_TIDDLYWIKI_FILES_PATH:/wikis/ -p 8080:80 --rm --detach wikis:latest
+```
+
+Now you should have a Linux container running on your Mac with the latest Apple tool serving your TiddlyWiki at `http://localhost:8080/wiki.html` and saving the changes to your file system!
 
 -------
 "This project is licensed under the terms of the MIT license."
@@ -63,7 +85,9 @@ O:
 podman container run --rm -p 8080:80 -v ~/Downloads/empty\(1\).html:/wikis/wiki.html --name miswikis duquedeturing/tiddlywiki:latest
 ```
 
-## Si quieres construr tu propia imagen:
+## Podman o docker
+
+### Si quieres construr tu propia imagen:
 Para el soporte de WebDAV se instala en Caddy el plugin [Caddy-WebDAV](github.com/mholt/caddy-webdav).
 
 Con podman o docker instalados sólo se requieren 2 pasos:
@@ -75,10 +99,31 @@ podman image build -t miswikis .
 
 2. Ejecutar el contenedor 
 ```
-podman container run --rm -p 8080:80 -v YOUR_PATH_TO_YOUR_TIDDLYWIKI_FILE/empty.html:/wiki/wiki.html --name miswikis miswikis
+podman container run --rm -p 8080:80 -v YOUR_PATH_TO_YOUR_TIDDLYWIKI_FILE/empty.html:/wikis/wiki.html --name miswikis miswikis
 ```
 
 Si está usando el contenedor local en su máquina entonces puede accesar su wiki en: http://localhost:8080/wiki.html
+
+## Apple Containers
+
+Apple publicó una fantástica herramienta para construir y ejecutar contenedores de Linux en Macs con Apple Silicon. Puedes construir la imagen y tener you propia wiki directamente en tu Mac.
+
+Para empezar sigue las instrucciones en el [repositorio oficial](https://github.com/apple/container) para construir y ejecutar la herramienta. Una vez la tengas funcionando en tu Mac: 
+
+1. Construye la imagen de este repositorio 
+
+```zsh
+container build --tag wikis --file Dockerfile .
+```
+
+2. Ejecuta el contenedor
+
+```zsh
+container run --name miswikis -v MY_TIDDLYWIKI_FILES_PATH/empty.html:/wikis/wiki.html -p 8080:80 --rm --detach wikis:latest
+```
+
+Ahora vas a tener un contenedor Linux funcionando en tu Mac con la última versión de la herramienta oficial de Apple, sirviendo tu TiddlyWiki en `http://localhost:8080/wiki.html` y guardando los cambios en tu sistema de archivos !
+
 
 -------
 "This project is licensed under the terms of the MIT license."
